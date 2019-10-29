@@ -52,7 +52,7 @@
                     <?php foreach($peoples as $people) : ?>
                         <tr>
                             <th><?= ++$start; ?></th>
-                            <td><?= $people['name']; ?></td>
+                            <td><?= $people['nama']; ?></td>
                             <td><?= $people['email']; ?></td>
                             <td>
                                 <a href="<?= base_url(); ?>peoples/detail/<?= $people['id']; ?>" class="badge badge-primary float-right ml-1">Detail</a>

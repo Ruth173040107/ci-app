@@ -6,8 +6,8 @@
                     Detail Data Peoples
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title"><?= $peoples['name']; ?></h5>
-                    <p class="card-text"><?= $peoples['address']; ?></p>
+                    <h5 class="card-title"><?= $peoples['nama']; ?></h5>
+                    <p class="card-text"><?= $peoples['alamat']; ?></p>
                     <p class="card-text"><?= $peoples['email']; ?></p>
                     <a href="<?= base_url(); ?>peoples" class="btn btn-primary">Kembali</a>
                 </div>

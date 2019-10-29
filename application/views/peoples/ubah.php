@@ -12,15 +12,15 @@
                         <input type="hidden" name="id" value="<?= $peoples['id']; ?>">
                 
                         <div class="form-group">
-                            <label for="name">Nama</label>
-                            <input type="text" name="name" class="form-control" id="name" value="<?= $peoples['name']; ?>">
-                            <small class="form-text text-danger"><?= form_error('name'); ?></small>
+                            <label for="nama">Nama</label>
+                            <input type="text" name="name" class="form-control" id="nama" value="<?= $peoples['nama']; ?>">
+                            <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                         </div>
                 
                         <div class="form-group">
-                            <label for="address">Alamat</label>
-                            <input type="text" name="address" class="form-control" id="address" value="<?= $peoples['address']; ?>">
-                            <small class="form-text text-danger"><?= form_error('address'); ?></small>
+                            <label for="alamat">Alamat</label>
+                            <input type="text" name="alamat" class="form-control" id="alamat" value="<?= $peoples['alamat']; ?>">
+                            <small class="form-text text-danger"><?= form_error('alamat'); ?></small>
                         </div>
                 
                         <div class="form-group">

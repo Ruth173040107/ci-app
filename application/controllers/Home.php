@@ -2,7 +2,7 @@
  class Home extends CI_Controller{
  	
 
- 	public function index($nama = 'Ruth saanah :)'){
+ 	public function index($nama = 'Ruth Saanah :)'){
  		$data['judul'] = 'Halaman Home';
  		$data['nama'] = $nama;
  		$this->load->view('templates/header', $data);

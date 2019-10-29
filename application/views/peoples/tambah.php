@@ -9,15 +9,15 @@
                 <div class="card-body">
                     <form action="" method="post">
                         <div class="form-group">
-                            <label for="name">Nama</label>
-                            <input type="text" name="name" class="form-control" id="name">
-                            <small class="form-text text-danger"><?= form_error('name'); ?></small>
+                            <label for="nama">Nama</label>
+                            <input type="text" name="nama" class="form-control" id="nama">
+                            <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                         </div>
                 
                         <div class="form-group">
-                            <label for="address">Alamat</label>
-                            <input type="text" name="address" class="form-control" id="address">
-                            <small class="form-text text-danger"><?= form_error('address'); ?></small>
+                            <label for="alamat">Alamat</label>
+                            <input type="text" name="alamat" class="form-control" id="alamat">
+                            <small class="form-text text-danger"><?= form_error('alamat'); ?></small>
                         </div>
                 
                         <div class="form-group">

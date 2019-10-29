@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Okt 2019 pada 17.37
--- Versi server: 10.3.16-MariaDB
--- Versi PHP: 7.1.30
+-- Generation Time: 29 Okt 2019 pada 17.01
+-- Versi Server: 10.1.28-MariaDB
+-- PHP Version: 7.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mahasiswa` (
-  `id` int(11) NOT NULL,
+  `id` int(250) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `nrp` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -41,30 +41,97 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`) VALUES
-(2, 'sandhika Galih', '043040023', 'sandhika Galih@mail.unpas.ac.id', 'Teknik mesin'),
-(3, 'Rina Nuraini', '153040055', 'rina@mail.unpas.ac.id', 'akutansi'),
-(4, 'muhamad azhar hamdani', '65656576', 'muhamadazhar08@gmail.com', 'Teknik Informatika'),
-(10, 'yuda kustiama', '0115101447', 'yuda@mail.unpas.ac.id', 'Teknik Pangan');
+(1, 'Ruth saanah', '173040107', 'ruthsaanah25@gmail.com', 'Teknik Informatika'),
+(2, 'Amelia', '173040109', 'AMELIA@gmail.com', 'Teknik Informatika'),
+(4, 'dinda', '173040097', 'dinda23@gmail.com', 'Teknologi Pangan'),
+(7, 'yuyun', '1768880', 'yuyunmoet@gmail.com', 'Teknik Planologi');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `peoples`
+--
+
+CREATE TABLE `peoples` (
+  `id` int(250) NOT NULL,
+  `nama` varchar(250) NOT NULL,
+  `alamat` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `peoples`
+--
+
+INSERT INTO `peoples` (`id`, `nama`, `alamat`, `email`) VALUES
+(1, 'ruth saanah', 'karawang', 'ruthsaanah25@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `rentalcd`
+--
+
+CREATE TABLE `rentalcd` (
+  `id` int(11) NOT NULL,
+  `nama_penyewa` varchar(100) NOT NULL,
+  `tanggal_pinjam` date NOT NULL,
+  `tanggal_pengembalian` date NOT NULL,
+  `judulCD` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `rentalcd`
+--
+
+INSERT INTO `rentalcd` (`id`, `nama_penyewa`, `tanggal_pinjam`, `tanggal_pengembalian`, `judulCD`) VALUES
+(2, 'rena', '2019-09-11', '2019-09-20', 'ayat ayat cinta'),
+(3, 'jojo', '2019-09-08', '2019-09-20', 'betapa lucunya negri ini'),
+(4, 'shinta', '2019-09-08', '2019-09-12', 'ada apa dengan cinta 2');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `mahasiswa`
+-- Indexes for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- Indexes for table `peoples`
+--
+ALTER TABLE `peoples`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rentalcd`
+--
+ALTER TABLE `rentalcd`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `mahasiswa`
+-- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `peoples`
+--
+ALTER TABLE `peoples`
+  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `rentalcd`
+--
+ALTER TABLE `rentalcd`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

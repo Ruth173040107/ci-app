@@ -62,7 +62,7 @@
 					      <th><?php  echo $i=$i+1;?></th>
 					      <td><?= $mhs['nama']; ?></td>
 					      <td><?= $mhs['nrp']; ?></td>
-					      <td><?= $mhs['emai']; ?></td>
+					      <td><?= $mhs['email']; ?></td>
 					      <td><?= $mhs['jurusan']; ?></td>
 					      <td>
 					      	<a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('apakah anda yakin ingin menghapus data ini ?')">Hapus</a>

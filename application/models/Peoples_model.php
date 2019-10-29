@@ -10,7 +10,7 @@ class Peoples_model extends CI_Model{
 
     public function getPeoples($limit, $start, $keyword = null){
         if($keyword){
-            $this->db->like('name', $keyword);
+            $this->db->like('nama', $keyword);
             $this->db->or_like('email', $keyword);
         }
         return $this->db->get('peoples', $limit, $start)->result_array();
@@ -24,8 +24,8 @@ class Peoples_model extends CI_Model{
 
     public function tambahDataPeoples(){
         $data = [
-            "name" => $this->input->post('name', true),
-            "address" => $this->input->post('address', true),
+            "nama" => $this->input->post('nama', true),
+            "alamat" => $this->input->post('alamat', true),
             "email" => $this->input->post('email', true),
         ];
         $this->db->insert('peoples', $data);
@@ -39,8 +39,8 @@ class Peoples_model extends CI_Model{
 
     public function ubahDataPeoples(){
         $data = [
-            "name" => $this->input->post('name', true),
-            "address" => $this->input->post('address', true),
+            "nama" => $this->input->post('name', true),
+            "alamat" => $this->input->post('address', true),
             "email" => $this->input->post('email', true),
         ];
         $this->db->where('id', $this->input->post('id'));

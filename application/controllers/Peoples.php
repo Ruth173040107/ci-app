@@ -30,7 +30,7 @@ class Peoples extends CI_Controller{
 
 
     //config
-    $this->db->like('name', $data['keyword']);
+    $this->db->like('nama', $data['keyword']);
     $this->db->or_like('email', $data['keyword']);
     $this->db->from('peoples');
     $config['total_rows'] = $this->db->count_all_results();
@@ -51,8 +51,8 @@ class Peoples extends CI_Controller{
     public function tambah()
     {
         $data['judul'] = 'Form Tambah Data Peoples';
-        $this->form_validation->set_rules('name', 'Nama', 'required');
-        $this->form_validation->set_rules('address', 'Alamat', 'required');
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
@@ -78,8 +78,8 @@ class Peoples extends CI_Controller{
     {
         $data['judul'] = 'Form Ubah Data Peoples';
         $data['peoples'] = $this->Peoples_model->getPeoplesById($id);
-        $this->form_validation->set_rules('name', 'Nama', 'required');
-        $this->form_validation->set_rules('address', 'Alamat', 'required');
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
